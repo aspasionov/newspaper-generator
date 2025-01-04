@@ -1,10 +1,10 @@
 import { IS1, IS2, IS3, IS4, IS5, IS6 } from './styles';
-import ComponentWrapper from '../ComponentWrapper';
+import ComponentWrapper from '../ContentWrapper';
 import Box from '@mui/material/Box';
 
 const Quote = () => {
     return (
-      <ComponentWrapper form={<Box>lolik</Box>}>
+      <ComponentWrapper form={<Box>888</Box>} id="quote">
             <tr style={IS1}>
               <td style={IS2}>
                 <table border="0" cellpadding="0" cellspacing="0" width="632px" style={IS3}>
