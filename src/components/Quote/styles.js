@@ -4,7 +4,9 @@ export const IS1 = {
 }
 
 export const IS2 = {
-  fontSize: '16px', padding: '10px 20px'
+  fontSize: '16px',
+  padding: '10px 20px',
+  backgroundColor: 'white'
 }
 
 export const IS3 = {

@@ -1,10 +1,19 @@
+import { useState } from 'react';
 import { IS1, IS2, IS3, IS4, IS5, IS6 } from './styles';
 import ComponentWrapper from '../ContentWrapper';
 import Box from '@mui/material/Box';
+import Modal from './Modal'
+import data from '../../data.json'
+import { Parser } from "html-to-react";
+
+const defaultText = data.quote.text;
 
 const Quote = () => {
+  const [quote, setQuote] = useState("")
+  const htmlToReactParser = new Parser();
+
     return (
-      <ComponentWrapper form={<Box>888</Box>} id="quote">
+      <ComponentWrapper form={<Modal setQuote={setQuote} quote={quote}/>} id="quote">
             <tr style={IS1}>
               <td style={IS2}>
                 <table border="0" cellpadding="0" cellspacing="0" width="632px" style={IS3}>
@@ -14,10 +23,7 @@ const Quote = () => {
                         <img src="https://aspasionov.github.io/newspaper/quote.png" width="175" alt="quote" loading="lazy" />
                       </td>
                       <td valign="middle" style={IS6}>
-                        Not everyone can truly succeed in everything. But success only comes with self-management and determination.
-                        {/* <span style={{ fontStyle: 'normal', fontWeight: 300, color: 'black', fontSize: '13px', paddingTop: '5px', display: 'inline-block' }}>
-                          Japanese Proverb
-                        </span> */}
+                        {quote && quote !== '<br>'  ? htmlToReactParser.parse(quote) :  defaultText}
                       </td>
                     </tr>
                   </tbody>
