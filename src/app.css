@@ -5,3 +5,7 @@
 /* * {
     box-sizing: border-box;
 } */
+
+.picker.shr-bb-shr-cb.picker-dialog {
+  z-index: 1500;
+}

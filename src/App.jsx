@@ -1,11 +1,8 @@
 import { useState, useRef, createContext } from 'react'
-import Grid from '@mui/material/Grid2';
 import Box from '@mui/material/Box';
 import NewspaperHeader from './components/Header';
 import Quote from './components/Quote';
-import LeftSlider from './components/LeftSlider';
 import RightControls from './components/RightControls';
-import { DRAWER_WIDTH } from './constants';
 import { Main } from './styles';
 
 export const CopyContext = createContext();
