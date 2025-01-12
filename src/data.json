@@ -4,5 +4,21 @@
   },
   "quote": {
     "text": "Not everyone can truly succeed in everything. But success only comes with self-management and determination."
+  },
+  "vacancies": {
+    "text": "OPEN POSITIONS",
+    "subtext": "Join our team of creative & thinkers",
+    "positions": [
+      {
+        "id": 1,
+        "img": "",
+        "title": "Senior Technical Support Engineer",
+        "experience": "5",
+        "location": "Poland",
+        "link": "https://strongsd.com/careers/51/senior-technical-support-engineer"
+      }
+    ]
+
   }
+
 }

@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { IS1, IS2, IS3, IS4, IS5, IS6 } from './styles';
 import ComponentWrapper from '../ContentWrapper';
-import Box from '@mui/material/Box';
 import Modal from './Modal'
 import data from '../../data.json'
 import { Parser } from "html-to-react";
-import { localStorageHandler } from '../../utils'
+import { localStorageHandler, urlToSrc } from '../../utils'
+import { NEWSPAPER_KEY } from '../../constants'
 
 const defaultText = data.quote.text;
 
@@ -19,7 +19,7 @@ const Quote = () => {
   }
 
   useEffect(() => {
-    const localData = JSON.parse(localStorage.getItem('nwsppr'))
+    const localData = JSON.parse(localStorage.getItem(NEWSPAPER_KEY))
     if(localData && localData?.quote?.text) {
       setQuote(localData.quote.text)
     }
@@ -33,7 +33,7 @@ const Quote = () => {
                   <tbody>
                     <tr style={IS4} valign="middle">
                       <td valign="middle" style={IS5}>
-                        <img src="https://aspasionov.github.io/newspaper/quote.png" width="175" alt="quote" loading="lazy" />
+                        <img src={urlToSrc('13c3APOvQqTH_I8nbyy4_HEu-60oTWkx3')} width="175" alt="quote" />
                       </td>
                       <td valign="middle" style={IS6}>
                         {quote && quote !== '<br>'  ? htmlToReactParser.parse(quote) :  defaultText}

@@ -3,6 +3,7 @@ import ComponentWrapper from '../ContentWrapper';
 import Box from '@mui/material/Box';
 import Uploader from '../UI/FileUploader';
 import { urlToSrc, localStorageHandler } from '../../utils'
+import { NEWSPAPER_KEY } from '../../constants'
 import data from '../../data.json'
 
 const defaultSrc = data.header.url;
@@ -11,7 +12,7 @@ const NewspaperHeader = () => {
   const [file, setFile] = useState(null)
 
   useEffect(() => {
-    const localData = JSON.parse(localStorage.getItem('nwsppr'))
+    const localData = JSON.parse(localStorage.getItem(NEWSPAPER_KEY))
     if(localData && localData?.header?.url) {
         const url = new URL(localData.header.url);
         const id = url.searchParams.get('id');
