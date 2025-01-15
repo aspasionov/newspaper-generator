@@ -1,0 +1,33 @@
+.picker.shr-bb-shr-cb.picker-dialog {
+  z-index: 1500;
+}
+
+.heading {
+  padding: 0 20px;
+  color: #fff;
+  background-color: #233043;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  text-align: center;
+  border-right: none;
+}
+.subheading {
+  line-height: 48px;
+}
+
+.flag {
+  padding-top: 5px;
+  width: 14px;
+  height: 10px;
+}
+.flag1 {
+  padding-top: 7px;
+}
+
+a{
+  text-decoration: none;
+}

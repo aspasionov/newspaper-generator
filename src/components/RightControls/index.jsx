@@ -1,10 +1,11 @@
 import { useContext, useState } from 'react';
-import { Wrapper, OpenButton } from './styles';
+import { OpenButton } from './styles';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import Button from '@mui/material/Button';
 import Drawer from '@mui/material/Drawer';
 import { CopyContext } from '../../App';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { NEWSPAPER_HEAD, NEWSPAPER_FOOTER } from '../../constants';
 
 const RightControls = ({ contentRef }) => {
   const [open, setOpen] = useState(false);
@@ -12,7 +13,7 @@ const RightControls = ({ contentRef }) => {
 
   const copyToClipboard = async (e) => {
     await setCopyMode(true)
-    const code = contentRef.current.innerHTML;
+    const code = NEWSPAPER_HEAD + contentRef.current.innerHTML + NEWSPAPER_FOOTER;
     await navigator.clipboard.writeText(code);
     setCopyMode(false)
   };
