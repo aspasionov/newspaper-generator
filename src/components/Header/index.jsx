@@ -33,7 +33,7 @@ const NewspaperHeader = () => {
         </Box>} id="header">
             <tr>
                 <td width="672">
-                    <img width="672" height="321" src={file ? urlToSrc(file[0].id) : defaultSrc} alt="header img" loading="lazy"/>
+                    <img width="672" height="321" src={file ? `${urlToSrc(file[0].id)}&sz=w1000`: defaultSrc} alt="header img" loading="lazy"/>
                 </td>
             </tr>
         </ComponentWrapper>

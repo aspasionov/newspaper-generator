@@ -18,7 +18,17 @@
         "link": "https://strongsd.com/careers/51/senior-technical-support-engineer"
       }
     ]
-
+  },
+  "news": {
+    "text": "HOT NEWS",
+    "subtext": "Новини компанії, проєктiв, команд",
+    "items": [
+      {
+        "id": 1,
+        "img": "https://placehold.co/100x50",
+        "title": "НОВИНИ КОМПАНІЇ",
+        "html": "Some content..."
+      }
+    ]
   }
-
 }

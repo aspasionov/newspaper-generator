@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import NewspaperHeader from './components/Header';
 import Quote from './components/Quote';
 import Vacancies from './components/Vacancies';
+import News from './components/News';
 import RightControls from './components/RightControls';
 import { Main } from './styles';
 
@@ -29,6 +30,7 @@ function App() {
                         <NewspaperHeader/>
                         <Quote/>
                         <Vacancies/>
+                        <News/>
                       </tbody>
                     </table>
                   </td>
