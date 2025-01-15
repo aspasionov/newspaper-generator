@@ -30,7 +30,7 @@ const ComponentWrapper = ({ children, form, id }) => {
   if(copyMode) return <>{children}</>
 
   return (
-    <Box onMouseEnter={bind.onMouseEnter} onMouseLeave={bind.onMouseLeave} sx={{ position: 'relative'}}>
+    <Box onMouseEnter={bind.onMouseEnter} onMouseLeave={bind.onMouseLeave} sx={{ position: 'relative', display: activeBlock && activeBlock !== id ? 'none' : 'block'}}>
       <ChildreWrapper active={activeBlock === id}>
         {children}
       </ChildreWrapper>
