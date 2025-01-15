@@ -1,4 +1,5 @@
 import React,{ useReducer, useEffect } from 'react';
+import { Parser } from "html-to-react";
 import ComponentWrapper from '../ContentWrapper';
 import Modal from './Modal'
 import data from '../../data.json'
@@ -55,6 +56,8 @@ const reducer = (state, action) => {
 const News = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
+  const htmlToReactParser = new Parser();
+
   useEffect(() => {
       const localData = JSON.parse(localStorage.getItem(NEWSPAPER_KEY))
       if(localData && localData?.news) {
@@ -96,7 +99,7 @@ const News = () => {
       {(state.items.length ? state.items : defaultData.items).map((item) => (<React.Fragment key={item.id}>
         {item?.title && <tr>
         <td style={IS5}>
-          <table style={IS6}>
+          <table width={672} style={IS6}>
             <tr>
               <td>{item.title}</td>
             </tr>
@@ -118,7 +121,7 @@ const News = () => {
                         </div>
                       </td>
                       <td rowSpan="2" style={IS12}>
-                        {item.html}
+                        {htmlToReactParser.parse(item.html)}
                       </td>
                     </tr>
                     <tr>
