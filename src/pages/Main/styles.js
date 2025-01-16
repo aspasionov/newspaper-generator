@@ -1,7 +1,7 @@
 import { styled } from '@mui/material/styles';
-import { DRAWER_WIDTH } from './constants';
+import { DRAWER_WIDTH } from '../../constants';
 
-const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
+const Content = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   ({ theme }) => ({
     flexGrow: 1,
     minHeight: '100vh',
@@ -25,4 +25,4 @@ const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
   }),
 );
 
-export { Main }
+export { Content }
