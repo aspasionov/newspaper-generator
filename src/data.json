@@ -30,5 +30,10 @@
         "html": "Some content..."
       }
     ]
+  },
+  "projectOverview": {
+    "text": "PROJECT OVERVIEW",
+    "logo": "https://placehold.co/100x50",
+    "html": "Some content..."
   }
 }
