@@ -4,6 +4,7 @@ import NewspaperHeader from '../../components/Header';
 import Quote from '../../components/Quote';
 import Vacancies from '../../components/Vacancies';
 import News from '../../components/News';
+import ProjectOverview from '../../components/ProjectOverview';
 import RightControls from '../../components/RightControls';
 import { Content } from './styles';
 import { CopyContext } from '../../App';
@@ -27,6 +28,7 @@ const Main = ({ contentRef }) => {
                         <Quote/>
                         <Vacancies/>
                         <News/>
+                        <ProjectOverview/>
                       </tbody>
                     </table>
                   </td>
