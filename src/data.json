@@ -35,5 +35,16 @@
     "text": "PROJECT OVERVIEW",
     "logo": "https://placehold.co/100x50",
     "html": "Some content..."
+  },
+  "education": {
+    "text": "NEWS",
+    "subtext": "EDUCATION",
+    "html": "Всі доступні курси можна знайти за <a href='https://bit.ly/3bJ0Yvo' style='color: '#FD8D46;' target='_blank'>посиланням</a>."
+  },
+  "foundation": {
+    "text": "FOUNDATION",
+    "subtext": "strongsd-for-strong-ukrainians",
+    "img": "https://placehold.co/672x423",
+    "html": "B цьому році ми продовжували допомагати військовим з різних бригад, шеврони, яких ви можете бачити вище та госпіталям, які приймають кожного дня військових. Дякуємо вам за кожен донат, за кожну гривню, підтримку, допомогу у пошуку товарів, які потребують хлопці. <a href='https://join.slack.com/share/enQtODE5NjU0MjU3NDU4MS04OWNiNTdjMzRhZDc1ODBjOTk2ZmEyZjdjZGZlZjkyZWI2ZDkwOWE5MDJhZTA3YWEzYWE1Zjg4YTJjYjM3ZTc3' target='_blank'>Приєднуйтесь</a> до нашого фонду, робімо добрі справи разом!"
   }
 }
