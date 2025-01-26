@@ -1,6 +1,5 @@
-import { alpha, styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Grid from '@mui/material/Grid2';
-import Box from '@mui/material/Box';
 import IconButton from '@mui/material/Button';
 
 const Wrapper = styled(Grid)(({ theme }) => ({
@@ -11,7 +10,7 @@ const Wrapper = styled(Grid)(({ theme }) => ({
 }));
 
 const OpenButton = styled(IconButton)(({ theme }) => ({
-  position: 'absolute',
+  position: 'fixed',
   right: theme.spacing(1),
   top: theme.spacing(1),
   zIndex: theme.zIndex.drawer,
