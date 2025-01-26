@@ -18,27 +18,14 @@ const validateEmail = (email) => {
   return re.test(String(email).toLowerCase());
 }
 
-
 const RightControls = ({ contentRef }) => {
   const [open, setOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(null);
-  const [hiddenInputValue, setHiddenInputValue] = useState('');
   const { setCopyMode } = useContext(CopyContext);
   
-  const formRef = useRef(null);
-
-  const updateCode = async () => {
-    await setCopyMode(true)
-    const code = NEWSPAPER_HEAD + contentRef.current.innerHTML + NEWSPAPER_FOOTER;
-    setHiddenInputValue(code)
-    setCopyMode(false)
-  }
-
-  useEffect(() => {
-    if(contentRef.current) updateCode()
-  },[contentRef.current, open])
+  const formRef = useRef(null); 
 
   const copyToClipboard = async (e) => {
     await setCopyMode(true)
@@ -60,6 +47,19 @@ const RightControls = ({ contentRef }) => {
     }
     setError(null);
     setSending(true)
+    await setCopyMode(true)
+
+    const code = NEWSPAPER_HEAD + contentRef.current.innerHTML + NEWSPAPER_FOOTER;
+    const input = formRef.current.querySelector('input[name="code"]');
+    if (input) {
+      formRef.current.removeChild(input);
+    } 
+      const copy_input = document.createElement('input');
+      copy_input.type = 'text';
+      copy_input.name = 'code';
+      copy_input.value = code;
+      formRef.current.appendChild(copy_input);
+
     emailjs
       .sendForm(import.meta.env.VITE_EMAIL_SERVICE_ID, import.meta.env.VITE_EMAIL_TEMPLATE_ID, formRef.current, {
         publicKey: import.meta.env.VITE_EMAIL_PUBLIC_KEY,
@@ -75,6 +75,7 @@ const RightControls = ({ contentRef }) => {
       })
       .finally(() => {
         setSending(false)
+        setCopyMode(false)
       });
   }
 
@@ -95,7 +96,6 @@ const RightControls = ({ contentRef }) => {
         onClose={() => setOpen(false)}
       >
         <form action="" ref={formRef} style={{ display: 'none' }}>
-          <input type="text" name="code" value={hiddenInputValue}  />
           <input type="text" name="to_mail" value={email} />
         </form>
         <Button size="large" sx={{ mb: 2 }} startIcon={<ContentCopyIcon/>} variant="contained" onClick={copyToClipboard}>Copy code</Button>
