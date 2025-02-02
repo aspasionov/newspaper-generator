@@ -8,12 +8,12 @@ import ProjectOverview from '../../components/ProjectOverview';
 import RightControls from '../../components/RightControls';
 import Education from '../../components/Education';
 import Foundation from '../../components/Foundation';
+import Employees from '../../components/Employees';
 import { Content } from './styles';
 import { CopyContext } from '../../App';
 
 
 const Main = ({ contentRef }) => {
-
   const { openDrawer } = useContext(CopyContext);
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
@@ -33,6 +33,7 @@ const Main = ({ contentRef }) => {
                         <ProjectOverview/>
                         <Education/>
                         <Foundation/>
+                        <Employees/>
                       </tbody>
                     </table>
                   </td>
