@@ -46,5 +46,17 @@
     "subtext": "strongsd-for-strong-ukrainians",
     "img": "https://placehold.co/672x423",
     "html": "B цьому році ми продовжували допомагати військовим з різних бригад, шеврони, яких ви можете бачити вище та госпіталям, які приймають кожного дня військових. Дякуємо вам за кожен донат, за кожну гривню, підтримку, допомогу у пошуку товарів, які потребують хлопці. <a href='https://join.slack.com/share/enQtODE5NjU0MjU3NDU4MS04OWNiNTdjMzRhZDc1ODBjOTk2ZmEyZjdjZGZlZjkyZWI2ZDkwOWE5MDJhZTA3YWEzYWE1Zjg4YTJjYjM3ZTc3' target='_blank'>Приєднуйтесь</a> до нашого фонду, робімо добрі справи разом!"
+  },
+  "employees": {
+    "text": "New employees",
+    "items": [
+      {
+        "id": 1,
+        "img": "https://placehold.co/360x640",
+        "name": "Шимков Ігор",
+        "position": "Front-end Developer (React.js) (Talendo/ Poland)",
+        "about": "Я Ігор і я фронтендщик з 5-ти річним стажем, часто полюбляю створювати додатки з цікавою функціональністю, а також деколи подивляюсь на бекенд частину. Зазвичай використовую для розробки Vue або React разом з їх екосистемами) Дякую за розуміння!"
+      }
+    ]
   }
 }
