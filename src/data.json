@@ -82,5 +82,16 @@
         }
        ]
     ]
+  },
+  "others": {
+    "text": "Others",
+    "subtext": "Дні Народження та ін.",
+    "items": [
+      {
+        "id": 1,
+        "img": "https://placehold.co/400x558",
+        "html": "Some content..."
+      }
+    ]
   }
 }
