@@ -9,6 +9,7 @@ import RightControls from '../../components/RightControls';
 import Education from '../../components/Education';
 import Foundation from '../../components/Foundation';
 import Employees from '../../components/Employees';
+import Events from '../../components/Events';
 import { Content } from './styles';
 import { CopyContext } from '../../App';
 
@@ -34,6 +35,7 @@ const Main = ({ contentRef }) => {
                         <Education/>
                         <Foundation/>
                         <Employees/>
+                        <Events/>
                       </tbody>
                     </table>
                   </td>
