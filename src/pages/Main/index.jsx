@@ -11,6 +11,7 @@ import Foundation from '../../components/Foundation';
 import Employees from '../../components/Employees';
 import Events from '../../components/Events';
 import Others from '../../components/Others';
+import Calendar from '../../components/Calendar';
 import { Content } from './styles';
 import { CopyContext } from '../../App';
 
@@ -38,6 +39,7 @@ const Main = ({ contentRef }) => {
                         <Employees/>
                         <Events/>
                         <Others/>
+                        <Calendar/>
                       </tbody>
                     </table>
                   </td>

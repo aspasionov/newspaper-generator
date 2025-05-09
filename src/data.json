@@ -93,5 +93,9 @@
         "html": "Some content..."
       }
     ]
+  },
+  "calendar": {
+    "month": "",
+    "data": []
   }
 }
