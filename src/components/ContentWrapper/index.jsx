@@ -15,11 +15,12 @@ const ComponentWrapper = ({ children, form, id }) => {
 
   const { openDrawer, copyMode, setOpenDrawer, setActiveBlock, activeBlock } = useContext(CopyContext);
 
+  const {hovered, bind} = useHover();
+
   const handleOpen = () => {
     setOpenDrawer(true)
     setActiveBlock(id)
   };
-  const {hovered, bind} = useHover();
 
   const handleClose = () =>{
     setOpenDrawer(false);
@@ -30,7 +31,7 @@ const ComponentWrapper = ({ children, form, id }) => {
   if(copyMode) return <>{children}</>
 
   return (
-    <Box onMouseEnter={bind.onMouseEnter} onMouseLeave={bind.onMouseLeave} sx={{ position: 'relative', display: activeBlock && activeBlock !== id ? 'none' : 'block'}}>
+    <Box onMouseEnter={bind.onMouseEnter} onMouseLeave={() =>  activeBlock !== id && bind.onMouseLeave()} sx={{ position: 'relative', display: activeBlock && activeBlock !== id ? 'none' : 'block'}}>
       <ChildreWrapper active={activeBlock === id}>
         {children}
       </ChildreWrapper>

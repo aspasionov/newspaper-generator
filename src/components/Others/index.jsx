@@ -93,7 +93,7 @@ const Others = () => {
             <table width="632px" style={IS5}>
               <tbody>
                 <tr>
-                  <td rowspan="2"><img src={item.img} loading="lazy" width={96} height={105} style={IS6} alt="birdthay" /></td>
+                  <td rowSpan="2"><img src={item.img} loading="lazy" width={96} height={105} style={IS6} alt="birdthay" /></td>
                 </tr>
                 <tr>
                   <td style={IS7}>
