@@ -47,6 +47,53 @@ const IS15 = {
   padding: "2px",
 };
 
+const IS16 = { paddingBottom: "20px" };
+
+const IS17 = { backgroundColor: "#F9F9F9", borderRadius: "0 0 4px 4px" };
+
+const IS18 = {
+  backgroundColor: "#FD8D46",
+  textAlign: "center",
+  fontSize: 14,
+  fontWeight: 500,
+  color: "#fff",
+  width: 672,
+  borderRadius: "4px 4px 0 0",
+  padding: "4px 0",
+};
+
+const IS19 = { padding: "5px 15px" };
+
+const IS20 = { tableLayout: "fixed" };
+
+const IS21 = {
+  fontSize: 14,
+  paddingRight: 5,
+  color: "#54555E",
+};
+
+const IS22 = { margin: 0, padding: 0 };
+
+const IS23 = {
+  paddingLeft: "5px",
+  fontSize: "14px",
+  color: "#54555E",
+  marginLeft: "-14px",
+};
+
+const IS24 = {
+  paddingLeft: 5,
+  fontSize: 14,
+  color: "#54555E",
+  marginLeft: -14,
+};
+
+const IS25 = { padding: "5px 15px" };
+
+const IS26 = { lineHeight: "20px" };
+
+const IS27 = { padding: "10px" };
+
 const StyledMenuItem = styled(MenuItem)(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -89,4 +136,16 @@ export {
   IS13,
   IS14,
   IS15,
+  IS16,
+  IS17,
+  IS18,
+  IS19,
+  IS20,
+  IS21,
+  IS22,
+  IS23,
+  IS24,
+  IS25,
+  IS26,
+  IS27,
 };
