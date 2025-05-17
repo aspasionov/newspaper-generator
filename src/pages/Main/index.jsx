@@ -25,8 +25,8 @@ const Main = ({ contentRef }) => {
         <Box sx={{ mx: "auto", width: "100%", maxWidth: 675 }} ref={contentRef}>
           <table
             border="0"
-            cellpadding="0"
-            cellspacing="0"
+            cellPadding="0"
+            cellSpacing="0"
             width="100%"
             style={{ margin: 0, padding: 0 }}
           >
@@ -35,8 +35,8 @@ const Main = ({ contentRef }) => {
                 <td align="center">
                   <table
                     border="0"
-                    cellpadding="0"
-                    cellspacing="0"
+                    cellPadding="0"
+                    cellSpacing="0"
                     width="632px"
                     style={{
                       maxWidth: "672px",

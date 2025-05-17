@@ -29,7 +29,7 @@ const Quote = () => {
       <ComponentWrapper form={<Modal setQuote={handleChange} quote={quote}/>} id="quote">
             <tr style={IS1}>
               <td style={IS2}>
-                <table border="0" cellpadding="0" cellspacing="0" width="632px" style={IS3}>
+                <table border="0" cellPadding="0" cellSpacing="0" width="632px" style={IS3}>
                   <tbody>
                     <tr style={IS4} valign="middle">
                       <td valign="middle" style={IS5}>
