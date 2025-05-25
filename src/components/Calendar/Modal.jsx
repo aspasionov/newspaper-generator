@@ -1,6 +1,13 @@
 import { useState } from "react";
 
-import TextField from "@mui/material/TextField";
+import {
+  TextField,
+  DialogActions,
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  Button,
+} from "@mui/material";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import dayjs from "dayjs";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -21,6 +28,8 @@ import { StyledMenuItem, AddNew } from "./styles";
 const Modal = ({ state, dispatch }) => {
   const [selectedMonth, setSelectedMonth] = useState(dayjs());
   const [currentDay, setCurrentDay] = useState(dayjs());
+  const [showConfirmation, setShowConfirmation] = useState(false);
+  const [pendingMonthChange, setPendingMonthChange] = useState(null);
 
   const getWeekIndexAndDayId = () => {
     const index = currentDay.week() - selectedMonth.startOf("month").week();
@@ -36,20 +45,33 @@ const Modal = ({ state, dispatch }) => {
   const currentEvents = getCurrentEvents()?.holidays || [];
 
   const handleMonthChange = (newMonth) => {
-    const year = newMonth.year();
-    const month = newMonth.month();
-
-    setCurrentDay(newMonth.clone().date(9));
-
-    dispatch({
-      type: "change-month",
-      payload: { name: newMonth.format("MMMM"), year, month },
-    });
-    setSelectedMonth(newMonth);
+    setPendingMonthChange(newMonth);
+    setShowConfirmation(true);
   };
 
   const handleChangeDay = (newDay) => {
     setCurrentDay(newDay);
+  };
+
+  const confirmMonthChange = () => {
+    if (!pendingMonthChange) return;
+
+    const year = pendingMonthChange.year();
+    const month = pendingMonthChange.month();
+
+    setCurrentDay(pendingMonthChange.clone().date(9));
+    dispatch({
+      type: "change-month",
+      payload: { name: pendingMonthChange.format("MMMM"), year, month },
+    });
+    setSelectedMonth(pendingMonthChange);
+    setShowConfirmation(false);
+    setPendingMonthChange(null);
+  };
+
+  const cancelMonthChange = () => {
+    setShowConfirmation(false);
+    setPendingMonthChange(null);
   };
 
   const handleChangeEvent = (e, id) => {
@@ -91,6 +113,24 @@ const Modal = ({ state, dispatch }) => {
 
   return (
     <Box sx={{ p: 2 }}>
+      <Dialog open={showConfirmation} onClose={cancelMonthChange}>
+        <DialogTitle>Change Month?</DialogTitle>
+        <DialogContent>
+          This will delete existing holidays for the currently selected month.
+          Are you sure you want to proceed?
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={cancelMonthChange}>Cancel</Button>
+          <Button
+            onClick={confirmMonthChange}
+            color="error"
+            variant="contained"
+          >
+            Confirm
+          </Button>
+        </DialogActions>
+      </Dialog>
+
       <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="en-gb">
         <DatePicker
           label={"Choose the month"}
