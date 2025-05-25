@@ -1,5 +1,7 @@
 import { NEWSPAPER_KEY } from "../constants";
 import dayjs from "dayjs";
+import "dayjs/locale/en-gb";
+dayjs.locale("en-gb");
 
 const urlToSrc = (id) => {
   return `https://drive.google.com/thumbnail?id=${id}`;
