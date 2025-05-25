@@ -201,7 +201,7 @@ const Calendar = () => {
 
       <tr align="center">
         <td style={IS3}>
-          <table width="672px" cellspacing="0" cellpadding="2px" border="0">
+          <table width="672px" cellSpacing="0" cellPadding="2px" border="0">
             <thead style={IS4}>
               <tr style={IS5}>
                 <th>Mon</th>
@@ -261,7 +261,7 @@ const Calendar = () => {
                               <td style={IS21}>
                                 {i === 0 && dayjs(el[0]).format("M.DD")}
                               </td>
-                              <td colspan="2">
+                              <td colSpan="2">
                                 <table
                                   cellPadding="0"
                                   cellSpacing="0"
@@ -297,7 +297,7 @@ const Calendar = () => {
                             <td style={IS21}>
                               {i === 0 && dayjs(el[0]).format("M.DD")}
                             </td>
-                            <td colspan="2">
+                            <td colSpan="2">
                               <table
                                 cellPadding="0"
                                 cellSpacing="0"
@@ -337,7 +337,7 @@ const Calendar = () => {
                               <td style={IS21}>
                                 {i === 0 && dayjs(el[0]).format("M.DD")}
                               </td>
-                              <td colspan="2">
+                              <td colSpan="2">
                                 <table
                                   cellPadding="0"
                                   cellSpacing="0"
@@ -373,7 +373,7 @@ const Calendar = () => {
                             <td style={IS21}>
                               {i === 0 && dayjs(el[0]).format("M.DD")}
                             </td>
-                            <td colspan="2">
+                            <td colSpan="2">
                               <table
                                 cellPadding="0"
                                 cellSpacing="0"
